@@ -1,6 +1,8 @@
 # correct "you got it"
 # 2 high
 # 2 low
+# currently does not work
+
 
 def guess_number guess
     number = 25
