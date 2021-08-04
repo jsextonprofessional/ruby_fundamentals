@@ -6,12 +6,14 @@
 
 def guess_number guess
     number = 25
-    unless guess = number
+    if guess == number
         puts "u got it"
     elsif guess < number
         puts "2 lo"
     else guess > number
         puts "2 hi"
+    end
 end
-
-guess = 10
+puts guess_number 24
+puts guess_number 26
+puts guess_number 25
