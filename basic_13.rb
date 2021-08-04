@@ -1,10 +1,12 @@
 # Bonus: Try to use as few lines as possible for each question
 # 1. Print 1-255
 puts (1..255).find_all { |n| puts n }
+puts "end 1 -------------------------------"
 
 
 # 2. Print odd numbers between 1-255
 puts (1..255).find_all { |i| i % 2 != 0 }
+puts "end 2 -------------------------------"
 
 
 # 3. Print Sum
@@ -13,6 +15,8 @@ for j in 0..255
     k += j
     puts "New number:#{j} Sum:#{k}"
 end
+puts "end 3 -------------------------------"
+
 
 
 # 4. Iterating through an array
@@ -20,6 +24,9 @@ x = [1,3,5,7,9,13]
 x.each do |index|
     puts index
 end
+puts "end 4 -------------------------------"
+
+
 
 
 # 5. Find Max
@@ -29,11 +36,15 @@ array_52 = [1, 2, 3, 4]
 puts array_50.max
 puts array_51.max
 puts array_52.max
+puts "end 5 -------------------------------"
+
 
 
 # 6. Get Average
 array_6 = [2, 10, 3]
 puts array_6.inject(:+)/array_6.length
+puts "end 6 -------------------------------"
+
 
 
 # 7. Array with Odd Numbers
@@ -47,10 +58,10 @@ for k in 1..255
     end
 end
 puts array_7
+puts "end 7 -------------------------------"
 
 
 # 8. Greater Than Y
-# Write a program that takes an array and returns the number of values in that array whose value is greater than a given value y. For example, if array = [1, 3, 5, 7] and y = 3, after your program is run it will print 2 (since there are two values in the array that are greater than 3).
 input = 3
 indexes_greater_than_input = 0
 array_8 = [1, 3, 5, 7]
@@ -61,6 +72,7 @@ for l in array_8
     end
 end
 puts indexes_greater_than_input
+puts "end 8 -------------------------------"
 
 
 # NOT WORKING
@@ -77,6 +89,7 @@ puts indexes_greater_than_input
 #     # end
 # end
 # puts array_9
+puts "end 9 -------------------------------"
 
 
 # 10. Eliminate Negative Numbers
@@ -89,6 +102,8 @@ for o in array_10
     end
 end
 puts array_10
+puts "end 10 -------------------------------"
+
 
 
 # NOT WORKING
@@ -99,15 +114,19 @@ puts array_10
 # min11 = array_11.minimum
 # avg11 = array_11.inject(:+)/array_11.length
 # puts "MAX: #{max11}, MIN: #{min11}, AVG: #{avg11}"
+puts "end 11 -------------------------------"
 
 
+# HOW DO I GET THE 0 AT THE END?
 # 12. Shifting the Values in the Array
 # Given any array x, say [1, 5, 10, 7, -2], create an algorithm that shifts each number by one to the front. For example, when the program is done, an x of [1, 5, 10, 7, -2] should become [5, 10, 7, -2, 0].
 array_12 = [1, 5, 10, 7, -2]
-for p in array_12
-    p -= 1
-end
+array_12.shift
 puts array_12
+puts "end 12 -------------------------------"
+
 
 # 13. Number to String
-# Write a program that takes an array of numbers and replaces any negative number with the string 'Dojo'. For example, if array x is initially [-1, -3, 2] after your program is done that array should be ['Dojo', 'Dojo', 2]
+array_13 = [-1, -3, 2]
+puts array_13.map { |r| r < 0 ? 'Dojo' : r }
+puts "end 13 -------------------------------"
