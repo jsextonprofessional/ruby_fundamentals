@@ -93,7 +93,6 @@ puts "end 9 -------------------------------"
 
 
 # 10. Eliminate Negative Numbers
-# array_10 = [1, 5, 10, -2], create an algorithm that replaces any negative number with the value of 0. When the program is done, x should have no negative values, say [1, 5, 10, 0].
 array_10 = [1, 5, 10, -2]
 for o in array_10
     if o < 0
