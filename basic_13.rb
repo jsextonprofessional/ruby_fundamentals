@@ -75,20 +75,9 @@ puts indexes_greater_than_input
 puts "end 8 -------------------------------"
 
 
-# NOT WORKING
 # 9. Square the values
-# Given any array x, say [1, 5, 10, -2], create an algorithm hat multiplies each value in the array by itself. When the program is done, the array x should have values that have been squared, say [1, 25, 100, 4].
-# array_9 = [1, 5, 10, -2]
-# for m in array_9
-#     array_9.insert(m, m)
-# #     array_9.replace(m, m *= m)
-# # end
-# # puts array_9
-#     # if m = array_9.index(m)
-#     # m = m ** m
-#     # end
-# end
-# puts array_9
+array_9 = [1, 5, 10, -2]
+puts array_9.map! { |squares| squares * squares }
 puts "end 9 -------------------------------"
 
 
@@ -120,8 +109,7 @@ puts "end 11 -------------------------------"
 # 12. Shifting the Values in the Array
 # Given any array x, say [1, 5, 10, 7, -2], create an algorithm that shifts each number by one to the front. For example, when the program is done, an x of [1, 5, 10, 7, -2] should become [5, 10, 7, -2, 0].
 array_12 = [1, 5, 10, 7, -2]
-array_12.shift
-puts array_12
+puts array_12.rotate!(1)[array_12.length-1] = 0
 puts "end 12 -------------------------------"
 
 
