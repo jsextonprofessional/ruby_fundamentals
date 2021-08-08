@@ -1,16 +1,18 @@
 module MyEnumerable
     def my_each
-        for i in 0..self.length
-            puts self[i]
+        for i in 0...self.length
+            yield(self[i])
         end
     end
 end
 class Array
     include MyEnumerable
 end
-puts "test case 1"
+puts "--------------start test case 1-------------"
 [1,2,3,4].my_each { |i| puts i } # => 1 2 3 4
-puts "test case 2"
+puts "----------------end test case 1-------------"
+puts "--------------start test case 2-------------"
 [1,2,3,4].my_each { |i| puts i * 10 } # => 10 20 30 40
+puts "----------------end test case 2-------------"
 
 MyEnumerable
